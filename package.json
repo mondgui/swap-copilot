@@ -1,0 +1,9 @@
+{
+  "name": "guarded-swap-copilot",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": { "dev": "vite" },
+  "dependencies": { "viem": "^2.38.3" },
+  "devDependencies": { "typescript": "^5.9.2", "vite": "^7.1.5" }
+}

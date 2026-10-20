@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Swap copilot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Literata:opsz,wght@7..72,560&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="page">
+      <p class="eyebrow">Local exchange · waits for you</p>
+      <h1>Swap copilot</h1>
+      <p class="lede">
+        Ask for a trade on the mini exchange. The assistant quotes it and stops.
+        Approve sends that exact plan. Decline sends nothing.
+      </p>
+      <p id="status" class="lede">Reading the local chain…</p>
+      <section class="cards">
+        <article>
+          <p id="label0" class="label">First coin</p>
+          <p id="reserve0" class="amount">—</p>
+        </article>
+        <article>
+          <p id="label1" class="label">Second coin</p>
+          <p id="reserve1" class="amount">—</p>
+        </article>
+      </section>
+      <div class="actions">
+        <button id="deposit" type="button">Plan a deposit</button>
+        <button id="swap" type="button">Plan a swap of 100</button>
+        <button id="greedy" class="secondary" type="button">Demand more than the quote</button>
+      </div>
+      <ol id="steps" class="steps"></ol>
+      <section id="plan" class="plan" hidden>
+        <h2 id="plan-title"></h2>
+        <div id="plan-lines"></div>
+        <div id="decision" class="decision">
+          <button id="approve" type="button">Approve</button>
+          <button id="decline" class="secondary" type="button">Decline</button>
+        </div>
+      </section>
+      <footer>
+        The pool is the
+        <a href="http://localhost:5176">mini exchange</a>.
+        This page cannot touch Base, and it will not send a trade you declined.
+      </footer>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
